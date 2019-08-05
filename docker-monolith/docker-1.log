@@ -23,3 +23,8 @@ gogs/gogs                                            0.11.19             bac6ce2
 redis                                                3.2.5               5f515359c7f8        2 years ago         183MB
 fedora                                               22                  01a9fe974dba        2 years ago         189MB
 adejonge/helloworld                                  latest              4fa84a96f0d6        5 years ago         3.6MB
+
+Difference between docker container and docker image:
+Container - is basically instance(running or not) of image. It has state(running, stopped etc).
+Image - is a snapshot. It has no state. This just collection of files.
+
