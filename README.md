@@ -2,7 +2,7 @@
 
 igefimov microservices repository
 ## Lesson 15. Homework
-**Docker intro.**
+**Технология контейнеризации. Введение в Docker**
 
 **git branch: docker-2**
 
