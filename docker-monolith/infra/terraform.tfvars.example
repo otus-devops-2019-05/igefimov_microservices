@@ -1,0 +1,5 @@
+project = "project-id"
+public_key_path = "~/.ssh/appuser.pub"
+private_key_path = "~/.ssh/appuser"
+zone = ""
+instance_count = "1"
