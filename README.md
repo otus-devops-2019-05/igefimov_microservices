@@ -1,7 +1,6 @@
 # igefimov_microservices
-Igor Efimov microservices repository
 
-
+igefimov microservices repository
 ## Lesson 15. Homework
 **Технология контейнеризации. Введение в Docker.**
 
