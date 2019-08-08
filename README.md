@@ -2,7 +2,7 @@
 
 igefimov microservices repository
 ## Lesson 15. Homework
-**Технология контейнеризации. Введение в Docker.**
+**Docker intro.**
 
 **git branch: docker-2**
 
@@ -48,4 +48,4 @@ Example:
 - Create image with pre-installed Docker using packer
 - Spin on few instances using terraform. Number of instances should be regulated by variable
 - Create Ansible playbook with dynamic inventory to install python docker SDK and run there application
- 
+
