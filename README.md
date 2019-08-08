@@ -3,9 +3,7 @@ Igor Efimov microservices repository
 
 
 ## Lesson 15. Homework
-**Технология
-  контейнеризации.
-  Введение в Docker.**
+**Технология контейнеризации. Введение в Docker.**
 
 **git branch: docker-2**
 
@@ -30,3 +28,25 @@ Each container has its own hostname. How to find it:
 - We can manage host processes from container if we use: docker run --rm --pid host
 
 
+**Docker-machine**
+We can run our docker containers on the remote hosts in GCP using docker-machine command
+
+- docker-machine create <host_name> - create hosts
+- eval $(docker-machine env <host_name>) - set the host active. From now on all docker commands will be executed on the
+ remote host
+-  eval $(docker-machine env --unset) - Switch to local docker
+
+Example:
+- export GOOGLE_PROJECT=docker-248711
+- docker-machine create --driver google \
+   --google-machine-image https://www.googleapis
+   .com/compute/v1/projects/ubunt-uos-cloud/global/images/family/ubuntu-1604-lts \
+   --google-machine-type n1-standard-1 \
+   --google-zone europe-west1-b \
+   docker-host
+   
+###### Extra task :star:
+- Create image with pre-installed Docker using packer
+- Spin on few instances using terraform. Number of instances should be regulated by variable
+- Create Ansible playbook with dynamic inventory to install python docker SDK and run there application
+ 
