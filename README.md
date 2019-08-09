@@ -71,10 +71,10 @@ RUN pip install --upgrade pip && pip install -r /app/requirements.txt
 ```
  
 ###### Extra task :star:
-Reduced size of UI image from original 781Mb to 254Mb:
+Reduced size of UI image from original 781Mb to 253Mb:
 ```bash
 ➜  src git:(docker-3) ✗ docker images | grep ui
-igefimov/ui         3.0                 2ec94ba21925        3 minutes ago       254MB
-igefimov/ui         2.0                 277750068613        About an hour ago   451MB
-igefimov/ui         1.0                 40c2ba8bf669        3 hours ago         781MB
+igefimov/ui         3.0                 b19cc522053a        31 seconds ago      253MB
+igefimov/ui         2.0                 277750068613        2 hours ago         451MB
+igefimov/ui         1.0                 40c2ba8bf669        4 hours ago         781MB
 ```
