@@ -78,3 +78,10 @@ igefimov/ui         3.0                 b19cc522053a        31 seconds ago      
 igefimov/ui         2.0                 277750068613        2 hours ago         451MB
 igefimov/ui         1.0                 40c2ba8bf669        4 hours ago         781MB
 ```
+
+
+- Created a new post in UI using <docker_host_ip>:9292
+- Killed all dockers and started them again
+- Post goes away :disappointed:
+- Create volume and attach it to the MongoDB container
+- Create a new post, restart containers. **Post is not deleted anymore!**
