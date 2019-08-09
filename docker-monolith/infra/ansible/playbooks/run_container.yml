@@ -1,0 +1,27 @@
+- name: Run container with our reddit app
+  hosts: tag_docker-host
+  become: yes
+  tasks:
+    - name: Install base packages
+      apt: name={{ item }} state=installed
+      with_items:
+        - git
+        - python-pip
+
+    - name: Upgrade pip
+      pip: name=pip state=present
+
+    - name: Install Docker SDK for Python
+      pip:
+        name: docker
+
+    - name: Run docker
+      docker_container:
+        name: reddit
+        image: igefimov/otus-reddit:1.0
+        ports:
+          - "9292:9292"
+        state: started
+
+    - name: Check if container is running
+      shell: docker ps
