@@ -49,3 +49,32 @@ Example:
 - Spin on few instances using terraform. Number of instances should be regulated by variable
 - Create Ansible playbook with dynamic inventory to install python docker SDK and run there application
 
+
+## Lesson 16. Homework
+**Docker-образы. Микросервисы**
+- Install linter for docker: brew install hadolint
+- Prepared 3 diff Dockerfiles for 3 microservices
+
+**Problems** :sweat_smile:
+```bash
+docker build -t igefimov/post:1.0 ./post-py
+ ```
+ was failing with 
+ ```bash
+ error: command 'gcc' failed with exit status 1
+ ``` 
+ Solution:
+ added to the post-py/Dockerfile:
+ ```dockerfile
+RUN apk add --no-cache gcc musl-dev
+RUN pip install --upgrade pip && pip install -r /app/requirements.txt
+```
+ 
+###### Extra task :star:
+Reduced size of UI image from original 781Mb to 254Mb:
+```bash
+➜  src git:(docker-3) ✗ docker images | grep ui
+igefimov/ui         3.0                 2ec94ba21925        3 minutes ago       254MB
+igefimov/ui         2.0                 277750068613        About an hour ago   451MB
+igefimov/ui         1.0                 40c2ba8bf669        3 hours ago         781MB
+```
