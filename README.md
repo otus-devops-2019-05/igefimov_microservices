@@ -49,3 +49,39 @@ Example:
 - Spin on few instances using terraform. Number of instances should be regulated by variable
 - Create Ansible playbook with dynamic inventory to install python docker SDK and run there application
 
+
+## Lesson 16. Homework
+**Docker-образы. Микросервисы**
+- Install linter for docker: brew install hadolint
+- Prepared 3 diff Dockerfiles for 3 microservices
+
+**Problems** :sweat_smile:
+```bash
+docker build -t igefimov/post:1.0 ./post-py
+ ```
+ was failing with 
+ ```bash
+ error: command 'gcc' failed with exit status 1
+ ``` 
+ Solution:
+ added to the post-py/Dockerfile:
+ ```dockerfile
+RUN apk add --no-cache gcc musl-dev
+RUN pip install --upgrade pip && pip install -r /app/requirements.txt
+```
+ 
+###### Extra task :star:
+Reduced size of UI image from original 781Mb to 253Mb:
+```bash
+➜  src git:(docker-3) ✗ docker images | grep ui
+igefimov/ui         3.0                 b19cc522053a        31 seconds ago      253MB
+igefimov/ui         2.0                 277750068613        2 hours ago         451MB
+igefimov/ui         1.0                 40c2ba8bf669        4 hours ago         781MB
+```
+
+
+- Created a new post in UI using <docker_host_ip>:9292
+- Killed all dockers and started them again
+- Post goes away :disappointed:
+- Create volume and attach it to the MongoDB container
+- Create a new post, restart containers. **Post is not deleted anymore!**
