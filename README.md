@@ -86,9 +86,23 @@ igefimov/ui         1.0                 40c2ba8bf669        4 hours ago         
 - Create volume and attach it to the MongoDB container
 - Create a new post, restart containers. **Post is not deleted anymore!**
 
+## Lesson 16. Homework
+**Docker: сети, docker-compose**
+
+- Experimented with different docker networks: none, host, bridge
+- Created two networks(frontend-network and frontend-network) and deployed there containers
+- Used docker-compose to run the app(start/stop all containers) 
+
 
 Q: How to set name of project?
 A: By default it is derived from directory name of docker-compose.yml
    You can set it up using COMPOSE_PROJECT_NAME environment variable
-   
-   
+
+###### Extra task :star:
+
+Create docker-compose.override.yml which will enable you to:
+- don't run docker-compose build each time after application code is changed
+- Run puma for ruby applications in debug mode with 2 workers(flags --debug and -w 2)
+
+Solution: https://docs.docker.com/compose/extends/
+When you run docker-compose up it reads the overrides automatically.
