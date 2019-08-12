@@ -11,16 +11,16 @@ services:
           - post_db
   ui:
     build: ./ui
-    image: ${USERNAME}/ui:1.0
+    image: ${USERNAME}/ui:${UI_SERVICE_VERSION}
     ports:
-      - 9292:9292/tcp
+      - ${UI_SERVICE_PORT}:${UI_SERVICE_PORT}/tcp # HOST:CONTAINER
     networks:
       frontend-network:
         aliases:
           - ui
   post:
     build: ./post-py
-    image: ${USERNAME}/post:1.0
+    image: ${USERNAME}/post:${POST_SERVICE_VERSION}
     networks:
       frontend-network:
         aliases:
@@ -30,7 +30,7 @@ services:
           - post
   comment:
     build: ./comment
-    image: ${USERNAME}/comment:1.0
+    image: ${USERNAME}/comment:${COMMENT_SERVICE_VERSION}
     networks:
       frontend-network:
         aliases:
