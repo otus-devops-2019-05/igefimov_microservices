@@ -85,3 +85,10 @@ igefimov/ui         1.0                 40c2ba8bf669        4 hours ago         
 - Post goes away :disappointed:
 - Create volume and attach it to the MongoDB container
 - Create a new post, restart containers. **Post is not deleted anymore!**
+
+
+Q: How to set name of project?
+A: By default it is derived from directory name of docker-compose.yml
+   You can set it up using COMPOSE_PROJECT_NAME environment variable
+   
+   
