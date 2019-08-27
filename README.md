@@ -85,3 +85,16 @@ igefimov/ui         1.0                 40c2ba8bf669        4 hours ago         
 - Post goes away :disappointed:
 - Create volume and attach it to the MongoDB container
 - Create a new post, restart containers. **Post is not deleted anymore!**
+
+## Lesson 19. Homework
+**Устройство Gitlab CI. Построение процесса непрерывной поставки**
+
+- Created new VM in GCP
+- Install docker there
+- Run docker with Gitlab CI
+- Configure Gitlab CI
+- Prepare definition of pipeline in .gitlab-ci.yml
+- Add one Runner to the project
+- Define different envs in the pipeline 
+- Define limits and restrictions in the pipeline
+- Define dynamic environment
