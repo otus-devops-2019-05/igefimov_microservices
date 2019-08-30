@@ -21,3 +21,6 @@ old/
 .molecule
 .cache
 .pytest_cache
+
+.env
+build_info.txt
