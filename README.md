@@ -98,3 +98,17 @@ igefimov/ui         1.0                 40c2ba8bf669        4 hours ago         
 - Define different envs in the pipeline 
 - Define limits and restrictions in the pipeline
 - Define dynamic environment
+
+
+
+## Lesson 20. Homework
+**Введение в мониторинг.Системы мониторинга.**
+
+Important notice: before you push images to dockerhub, you should run first docker-compose down
+Link to my github account with all docker images saved: https://hub.docker.com/u/igefimov 
+All the repositories are public.
+
+- Configured Prometheus in docker
+- Started Prometheus in docker
+- Collecting metrics from docker host using node-exporter
+
