@@ -112,3 +112,21 @@ All the repositories are public.
 - Started Prometheus in docker
 - Collecting metrics from docker host using node-exporter
 
+
+## Lesson 21. Homework
+**Мониторинг приложения и инфраструктуры.**
+- Put configuration for monitoring in a separate file: docker-compose-monitoring.yml
+```bash
+    docker-compose up -d
+    docker-compose -f docker-compose-monitoring.yml up -d
+
+```
+- Created firewall rule for cAdvisor: gcloud compute firewall-rules create cadvisor-default --allow tcp:8080
+- Later created firewall rules for all new services
+- Adding Grafana running on port 3000
+- Exported from Grafana Dashboard config and stored it in the repo: grafana/dashboards/{config-name}.json
+- Collected business metrics 
+- Set up alerting using Alert Manager
+- Alerting system is connected with #igor_efimov slack channel
+
+Link to my github account with all docker images saved: https://hub.docker.com/u/igefimov 
