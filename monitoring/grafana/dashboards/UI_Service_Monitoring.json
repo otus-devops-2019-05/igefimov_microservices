@@ -148,8 +148,8 @@
     "list": []
   },
   "time": {
-    "from": "2019-08-31T15:40:23.507Z",
-    "to": "2019-08-31T15:40:24.318Z"
+    "from": "now-15m",
+    "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [
