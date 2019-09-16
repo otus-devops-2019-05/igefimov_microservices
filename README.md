@@ -130,3 +130,10 @@ All the repositories are public.
 - Alerting system is connected with #igor_efimov slack channel
 
 Link to my github account with all docker images saved: https://hub.docker.com/u/igefimov 
+
+
+## Lesson 21. Homework
+**Введение в Kubernetes.**
+- Performed installation of Kubernetes cluster described in https://github.com/express42/kubernetes-the-hard-way
+- Teared down all the components
+
